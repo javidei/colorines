@@ -2,330 +2,172 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Colorines · Papelería, flores y regalos en Palma del Río</title>
-  <meta name="description" content="Colorines es tu papelería, copistería, floristería y tienda de regalos personalizados, juguetes y bisutería en Palma del Río.">
-  <meta name="theme-color" content="#ef77a4">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=colorines-responsive-2">
-  <script src="app.js?v=colorines-real-1" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#467ca6">
+  <meta name="description" content="Thirty, una red social nostálgica para amigos inspirada en la web social de finales de los 2000.">
+  <title>Thirty · La red de los de siempre</title>
+  <link rel="icon" href="assets/thirty-logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=thirty-20260806">
+  <script src="app.js?v=thirty-20260806" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <a class="skip" href="#main">Saltar al contenido</a>
 
-  <div class="announcement">
-    <p>Copistería · Arreglos florales · Regalos personalizados</p>
-    <a href="https://www.instagram.com/colorinespalma/" target="_blank" rel="noopener noreferrer">@colorinespalma</a>
-  </div>
-
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="#inicio" aria-label="Colorines, inicio">
-        <img src="assets/logo.svg?v=real-1" alt="Colorines" width="200" height="200">
-      </a>
-
-      <nav class="nav" aria-label="Navegación principal">
-        <a href="#categorias">Qué encontrarás</a>
-        <a href="#ideas">Ideas y novedades</a>
-        <a href="#tienda">La tienda</a>
-        <a href="#contacto">Contacto</a>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <button class="brand" type="button" data-view="inicio" aria-label="Ir al inicio">
+        <img src="assets/thirty-logo.svg" alt="Thirty" width="145" height="42">
+      </button>
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <button class="active" type="button" data-view="inicio">Inicio</button>
+        <button type="button" data-view="perfil">Perfil</button>
+        <button type="button" data-view="mensajes">Mensajes <b>2</b></button>
+        <button type="button" data-view="gente">Gente</button>
+        <button type="button" data-view="fotos">Fotos</button>
+        <button type="button" data-view="eventos">Eventos</button>
       </nav>
-
-      <a class="instagram-link instagram-link--header" href="https://www.instagram.com/colorinespalma/" target="_blank" rel="noopener noreferrer" aria-label="Colorines en Instagram">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="instagram-dot" cx="17.5" cy="6.5" r="1"></circle></svg>
-        <span>@colorinespalma</span>
-      </a>
+      <label class="search">
+        <span class="sr-only">Buscar</span>
+        <input id="search" type="search" placeholder="Buscar en Thirty…" autocomplete="off">
+        <span aria-hidden="true">⌕</span>
+      </label>
+      <button class="upload-top" type="button" data-open-upload>Subir fotos</button>
+      <button class="bell" id="bell" type="button" aria-label="Notificaciones">●<i>3</i></button>
+      <button class="avatar avatar--javi avatar--small" type="button" data-view="perfil" aria-label="Mi perfil">JD</button>
     </div>
+    <aside class="notifications" id="notifications" hidden>
+      <strong>Notificaciones</strong>
+      <p><span class="avatar avatar--sue">S</span><b>Sue</b> ha comentado tu foto.</p>
+      <p><span class="avatar avatar--sergio">S</span><b>Sergio</b> te ha escrito en el tablón.</p>
+      <p><span class="avatar avatar--cris">C</span><b>Cristina</b> te ha invitado a un evento.</p>
+    </aside>
   </header>
 
-  <main id="contenido">
-    <section class="hero" id="inicio">
-      <div class="hero-copy">
-        <p class="eyebrow">Tu tienda de confianza en Palma del Río</p>
-        <h1>Todo lo bonito<br><em>empieza con color.</em></h1>
-        <p class="hero-lead">
-          Papelería, copistería, flores, regalos personalizados, juguetes,
-          bisutería y muchos detalles para sorprender.
-        </p>
-        <div class="hero-actions">
-          <a class="button" href="#categorias">Descubrir la tienda</a>
-          <a class="button button--ghost" href="https://www.instagram.com/colorinespalma/" target="_blank" rel="noopener noreferrer">Consultar por Instagram</a>
+  <main class="layout" id="main">
+    <aside class="leftbar">
+      <section class="card mini-profile">
+        <button class="mini-profile__head" type="button" data-view="perfil">
+          <span class="avatar avatar--javi avatar--large">JD</span>
+          <span><strong>Javi Díaz</strong><small>Palma del Río</small></span>
+        </button>
+        <div class="stats">
+          <button type="button" data-view="perfil"><b>128</b><span>visitas</span></button>
+          <button type="button" data-view="gente"><b>34</b><span>amigos</span></button>
+          <button type="button" data-view="fotos"><b>76</b><span>fotos</span></button>
         </div>
-        <ul class="hero-points" aria-label="Servicios principales">
-          <li><span>✓</span> Diseños personalizados</li>
-          <li><span>✓</span> Atención cercana</li>
-          <li><span>✓</span> Recogida en tienda</li>
-        </ul>
-      </div>
+        <button class="request-link" type="button" data-view="gente"><b>+</b><span>1 petición de amistad<small>Revisar ahora</small></span></button>
+      </section>
 
-      <div class="hero-art" aria-label="Selección de productos y servicios de Colorines">
-        <div class="hero-logo-card">
-          <img src="assets/logo.svg?v=real-1" alt="Logotipo de Colorines" width="200" height="200">
-          <p>Detalles hechos<br>para ti</p>
+      <section class="card side-card">
+        <div class="side-title"><h2>Invita a tus amigos</h2><span>5 invitaciones</span></div>
+        <form id="invite-form" class="invite"><input type="email" placeholder="correo@ejemplo.com" required><button>Invitar</button></form>
+        <small id="invite-result" aria-live="polite"></small>
+      </section>
+
+      <section class="card side-card">
+        <div class="side-title"><h2>Próximos eventos</h2><button type="button" data-view="eventos">Ver todos</button></div>
+        <button class="mini-event" type="button" data-view="eventos"><time><b>15</b>AGO</time><span><strong>Barbacoa de verano</strong><small>Casa de Sergio · 21:00</small></span></button>
+        <button class="mini-event" type="button" data-view="eventos"><time><b>05</b>SEP</time><span><strong>Noche de karaoke</strong><small>Centro · 22:30</small></span></button>
+      </section>
+
+      <section class="card memory">
+        <div class="side-title"><h2>Tal día como hoy</h2><span>2011</span></div>
+        <div class="memory-photo"><span>FERIA<br>2011</span></div>
+        <p>La foto borrosa que había que subir sí o sí.</p>
+      </section>
+    </aside>
+
+    <section class="content">
+      <section class="screen active" id="inicio" aria-labelledby="inicio-title">
+        <h1 class="sr-only" id="inicio-title">Inicio</h1>
+        <section class="card composer">
+          <div><span class="avatar avatar--javi">JD</span><textarea id="status" maxlength="180" placeholder="¿Qué estás pensando?"></textarea></div>
+          <footer><span><button type="button" data-demo-action>▣ Foto</button><button type="button" data-demo-action>♫ Música</button><button type="button" data-demo-action>⌖ Lugar</button></span><small id="counter">180</small><button class="primary" id="publish" type="button">Publicar</button></footer>
+        </section>
+        <div class="section-title"><div><h2>Novedades de tus amigos</h2><span>Lo que está pasando</span></div><div class="tabs"><button class="active" data-filter="todo">Todo</button><button data-filter="estado">Estados</button><button data-filter="foto">Fotos</button></div></div>
+        <div class="feed" id="feed" aria-live="polite"></div>
+      </section>
+
+      <section class="screen" id="perfil" hidden aria-labelledby="perfil-title">
+        <section class="card profile-hero">
+          <div class="cover"><span>THIRTY</span><b>Seguimos aquí.</b></div>
+          <div class="profile-main"><span class="avatar avatar--javi avatar--xl">JD</span><div><h1 id="perfil-title">Javi Díaz</h1><p id="profile-bio">Desarrollador, músico a ratos y superviviente de los 30.</p></div><button class="secondary" id="edit-profile">Editar mi perfil</button></div>
+          <nav class="profile-tabs"><button class="active" data-profile-tab="tablon">Tablón</button><button data-profile-tab="info">Información</button><button data-profile-tab="perfil-fotos">Fotos</button><button data-profile-tab="amigos">Amigos</button></nav>
+        </section>
+        <div class="profile-layout">
+          <aside>
+            <section class="card profile-info"><h2>Sobre mí</h2><p><b>Edad</b><span>33 años</span></p><p><b>Vive en</b><span>Palma del Río</span></p><p><b>Le gusta</b><span>Rock, guitarra y desarrollo web</span></p><p><b>En Thirty desde</b><span>Agosto de 2026</span></p></section>
+            <section class="card profile-friends"><div class="side-title"><h2>Amigos <span>34</span></h2><button data-view="gente">Ver todos</button></div><div class="friend-mosaic"><span class="avatar avatar--sue">S</span><span class="avatar avatar--sergio">S</span><span class="avatar avatar--cris">C</span><span class="avatar avatar--pablo">P</span><span class="avatar avatar--maria">M</span><span class="avatar avatar--david">D</span></div></section>
+          </aside>
+          <div>
+            <section class="card profile-panel active" data-profile-panel="tablon"><h2>Tablón</h2><form id="wall-form"><textarea placeholder="Escribe algo en tu tablón…" required></textarea><button class="primary">Publicar</button></form><div id="wall"></div></section>
+            <section class="card profile-panel" data-profile-panel="info" hidden><h2>Información</h2><dl class="info-list"><div><dt>Trabajo</dt><dd>Senior Software Engineer</dd></div><div><dt>Formación</dt><dd>Desarrollo de Aplicaciones Multiplataforma</dd></div><div><dt>Música</dt><dd>Rock español e internacional</dd></div><div><dt>Instrumentos</dt><dd>Guitarra, violín y armónica</dd></div></dl></section>
+            <section class="card profile-panel" data-profile-panel="perfil-fotos" hidden><div class="section-title"><div><h2>Mis fotos</h2><span>Últimos recuerdos</span></div><button class="secondary" data-view="fotos">Ver álbumes</button></div><div class="photo-mini-grid"><button class="shot shot--1" data-open-photo="0"></button><button class="shot shot--2" data-open-photo="1"></button><button class="shot shot--3" data-open-photo="2"></button><button class="shot shot--4" data-open-photo="3"></button></div></section>
+            <section class="card profile-panel" data-profile-panel="amigos" hidden><div class="section-title"><div><h2>Amigos</h2><span>Los de siempre</span></div><button class="secondary" data-view="gente">Buscar gente</button></div><div class="people-grid" id="profile-people"></div></section>
+          </div>
         </div>
-        <figure class="hero-photo hero-photo--flowers">
-          <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=720&q=85" alt="Ramo de flores en tonos rosas" fetchpriority="high">
-        </figure>
-        <figure class="hero-photo hero-photo--stationery">
-          <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=720&q=85" alt="Cuaderno y material de papelería" fetchpriority="high">
-        </figure>
-        <span class="doodle doodle--one" aria-hidden="true">✦</span>
-        <span class="doodle doodle--two" aria-hidden="true">♡</span>
-      </div>
+      </section>
+
+      <section class="screen" id="mensajes" hidden aria-labelledby="mensajes-title">
+        <section class="card page-card">
+          <div class="page-heading"><div><span>Privado, como antes</span><h1 id="mensajes-title">Mensajes</h1></div><button class="primary" id="new-message">Nuevo mensaje</button></div>
+          <div class="messages"><aside id="conversation-list"></aside><section><header id="thread-head"></header><div id="thread"></div><form id="message-form"><textarea placeholder="Escribe un mensaje…" required></textarea><button class="primary">Enviar</button></form></section></div>
+        </section>
+      </section>
+
+      <section class="screen" id="gente" hidden aria-labelledby="gente-title">
+        <section class="card page-card">
+          <div class="page-heading"><div><span>Tu gente de siempre</span><h1 id="gente-title">Gente</h1></div><input class="page-search" id="people-search" type="search" placeholder="Buscar por nombre o ciudad"></div>
+          <section class="friend-request" id="friend-request"><span class="avatar avatar--ana avatar--large">A</span><div><small>Petición de amistad</small><strong>Ana Beltrán</strong><span>3 amigos en común · Córdoba</span></div><button class="primary" id="accept">Aceptar</button><button class="secondary" id="ignore">Ahora no</button></section>
+          <div class="section-title"><div><h2>Mis amigos</h2><span id="people-count"></span></div></div>
+          <div class="people-grid" id="people-grid"></div>
+        </section>
+      </section>
+
+      <section class="screen" id="fotos" hidden aria-labelledby="fotos-title">
+        <section class="card page-card">
+          <div class="page-heading"><div><span>Con flash y sin filtros</span><h1 id="fotos-title">Fotos</h1></div><button class="primary" data-open-upload>Subir fotos</button></div>
+          <div class="albums"><button class="active" data-album="todo"><i class="shot shot--2"></i><strong>Todas las fotos</strong><small>76 fotos</small></button><button data-album="amigos"><i class="shot shot--1"></i><strong>Los de siempre</strong><small>29 fotos</small></button><button data-album="musica"><i class="shot shot--3"></i><strong>Conciertos</strong><small>18 fotos</small></button><button data-album="viajes"><i class="shot shot--4"></i><strong>Escapadas</strong><small>11 fotos</small></button></div>
+          <div class="section-title"><div><h2>Fotos recientes</h2><span>Pulsa para abrir y comentar</span></div></div>
+          <div class="photo-grid" id="photo-grid"></div>
+        </section>
+      </section>
+
+      <section class="screen" id="eventos" hidden aria-labelledby="eventos-title">
+        <section class="card page-card">
+          <div class="page-heading"><div><span>Planes que no se quedan en el grupo</span><h1 id="eventos-title">Eventos</h1></div><button class="primary" id="create-event">Crear evento</button></div>
+          <div class="tabs event-tabs"><button class="active" data-event-filter="proximos">Próximos</button><button data-event-filter="invitaciones">Invitaciones</button><button data-event-filter="pasados">Pasados</button></div>
+          <div class="event-list" id="event-list"></div>
+        </section>
+      </section>
+
+      <section class="card search-results" id="search-results" hidden aria-live="polite"></section>
     </section>
 
-    <section class="services-strip" aria-label="Servicios de Colorines">
-      <article>
-        <span class="service-number service-number--pink">01</span>
-        <div>
-          <h2>Copistería</h2>
-          <p>Impresiones y soluciones para el día a día.</p>
-        </div>
-      </article>
-      <article>
-        <span class="service-number service-number--blue">02</span>
-        <div>
-          <h2>Flores</h2>
-          <p>Arreglos preparados para cada ocasión.</p>
-        </div>
-      </article>
-      <article>
-        <span class="service-number service-number--yellow">03</span>
-        <div>
-          <h2>Personalizados</h2>
-          <p>Regalos únicos creados con cariño.</p>
-        </div>
-      </article>
-    </section>
-
-    <section class="catalog-section" id="categorias" aria-labelledby="catalog-title">
-      <div class="section-heading">
-        <div>
-          <p class="section-kicker">Un poco de todo, muy Colorines</p>
-          <h2 id="catalog-title">Encuentra justo ese<br>detalle que buscabas.</h2>
-        </div>
-        <p>
-          Explora las principales familias de productos. Si quieres confirmar
-          disponibilidad, escríbenos y te atendemos directamente.
-        </p>
-      </div>
-
-      <div class="catalog-toolbar">
-        <label class="search-box">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
-          <span class="sr-only">Buscar en el catálogo</span>
-          <input id="catalog-search" type="search" placeholder="¿Qué estás buscando?" autocomplete="off">
-        </label>
-        <div class="filters" aria-label="Filtrar categorías">
-          <button class="filter is-active" type="button" data-filter="all">Todo</button>
-          <button class="filter" type="button" data-filter="papeleria">Papelería</button>
-          <button class="filter" type="button" data-filter="regalos">Regalos</button>
-          <button class="filter" type="button" data-filter="flores">Flores</button>
-          <button class="filter" type="button" data-filter="complementos">Complementos</button>
-        </div>
-      </div>
-
-      <p class="catalog-result" id="catalog-result" aria-live="polite"></p>
-
-      <div class="product-grid" id="product-grid">
-        <article class="product-card product-card--blue" data-category="papeleria" data-name="Papelería y copistería material escolar impresiones libros">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=85" alt="Papelería y material creativo" loading="lazy">
-            <span class="product-badge">Todo el año</span>
-          </div>
-          <div class="product-copy">
-            <span>Papelería · Copistería</span>
-            <h3>Para estudiar, crear y organizarte</h3>
-            <p>Material escolar, artículos de papelería, impresiones y encargos de libros.</p>
-            <a href="https://www.instagram.com/colorinespalma/" target="_blank" rel="noopener noreferrer">Consultar <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-
-        <article class="product-card product-card--pink" data-category="regalos" data-name="Regalos personalizados tazas tote bags agendas detalles">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&w=800&q=85" alt="Regalo personalizado preparado con cariño" loading="lazy">
-            <span class="product-badge">Personalizable</span>
-          </div>
-          <div class="product-copy">
-            <span>Regalos personalizados</span>
-            <h3>Un detalle que habla de esa persona</h3>
-            <p>Tazas, bolsas, agendas y packs preparados para regalar y emocionar.</p>
-            <a href="https://www.instagram.com/stories/highlights/17894242245475693/" target="_blank" rel="noopener noreferrer">Ver personalizados <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-
-        <article class="product-card product-card--yellow" data-category="flores regalos" data-name="Floristería arreglos florales ramos flores celebraciones">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&q=85" alt="Flores de colores para preparar un arreglo" loading="lazy">
-            <span class="product-badge">Por encargo</span>
-          </div>
-          <div class="product-copy">
-            <span>Floristería</span>
-            <h3>Flores para decirlo todo</h3>
-            <p>Arreglos florales para celebraciones, regalos y momentos especiales.</p>
-            <a href="https://www.instagram.com/colorinespalma/" target="_blank" rel="noopener noreferrer">Pedir información <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-
-        <article class="product-card product-card--orange" data-category="regalos complementos" data-name="Juguetes personajes juegos niños Lilo Stitch">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1558060370-d644479cb6f7?auto=format&fit=crop&w=800&q=85" alt="Juguetes y artículos infantiles" loading="lazy">
-            <span class="product-badge">Novedades</span>
-          </div>
-          <div class="product-copy">
-            <span>Juguetes</span>
-            <h3>Para jugar, imaginar y sonreír</h3>
-            <p>Juguetes, pequeños juegos y artículos de sus personajes favoritos.</p>
-            <a href="https://www.instagram.com/colorinespalma/" target="_blank" rel="noopener noreferrer">Ver novedades <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-
-        <article class="product-card product-card--red" data-category="complementos regalos" data-name="Bisutería complementos pendientes pulseras collares regalos">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=85" alt="Pendientes y complementos de bisutería" loading="lazy">
-            <span class="product-badge">Para regalar</span>
-          </div>
-          <div class="product-copy">
-            <span>Bisutería · Complementos</span>
-            <h3>Ese toque que completa el look</h3>
-            <p>Bisutería y complementos bonitos para regalar o darte un capricho.</p>
-            <a href="https://www.instagram.com/colorinespalma/" target="_blank" rel="noopener noreferrer">Preguntar <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-
-        <article class="product-card product-card--mint" data-category="papeleria regalos complementos" data-name="Temporada vuelta al cole regalos profes comuniones eventos">
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=85" alt="Material para la vuelta al cole" loading="lazy">
-            <span class="product-badge">Temporada</span>
-          </div>
-          <div class="product-copy">
-            <span>Colecciones de temporada</span>
-            <h3>Siempre hay algo nuevo</h3>
-            <p>Vuelta al cole, regalos para profes, celebraciones y campañas especiales.</p>
-            <a href="https://www.instagram.com/colorinespalma/" target="_blank" rel="noopener noreferrer">Seguir la actualidad <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-      </div>
-
-      <div class="catalog-empty" id="catalog-empty" hidden>
-        <span aria-hidden="true">◌</span>
-        <h3>No encontramos esa categoría</h3>
-        <p>Prueba con otra palabra o pregúntanos directamente por Instagram.</p>
-      </div>
-    </section>
-
-    <section class="social-section" id="ideas" aria-labelledby="social-title">
-      <div class="social-intro">
-        <p class="section-kicker">El escaparate que siempre cambia</p>
-        <h2 id="social-title">Novedades desde Instagram.</h2>
-        <p>
-          Promociones, encargos, productos de temporada y nuevas ideas para
-          regalar. Sigue a Colorines para no perderte lo próximo.
-        </p>
-        <a class="button button--instagram" href="https://www.instagram.com/colorinespalma/" target="_blank" rel="noopener noreferrer">
-          Ver @colorinespalma
-        </a>
-      </div>
-      <div class="social-cards">
-        <a class="social-card social-card--yellow" href="https://www.instagram.com/colorinespalma/p/DZ4ZqPKs9Hz/" target="_blank" rel="noopener noreferrer">
-          <span>Junio 2026</span>
-          <strong>Vuelta al cole</strong>
-          <p>Encargos de libros de preescolar.</p>
-          <b>Ver publicación →</b>
-        </a>
-        <a class="social-card social-card--pink" href="https://www.instagram.com/colorinespalma/reel/DaAOYO2IKOf/" target="_blank" rel="noopener noreferrer">
-          <span>Junio 2026</span>
-          <strong>Tazas personalizadas</strong>
-          <p>Opciones para particulares y pedidos grandes.</p>
-          <b>Ver reel →</b>
-        </a>
-        <a class="social-card social-card--blue" href="https://www.instagram.com/colorinespalma/" target="_blank" rel="noopener noreferrer">
-          <span>En el perfil</span>
-          <strong>Regalos y novedades</strong>
-          <p>Packs, personajes, descuentos y encargos.</p>
-          <b>Ir a Instagram →</b>
-        </a>
-      </div>
-    </section>
-
-    <section class="store-section" id="tienda" aria-labelledby="store-title">
-      <div class="store-visual">
-        <div class="store-flower" aria-hidden="true">
-          <span></span><span></span><span></span><span></span><span></span><i></i>
-        </div>
-        <p>Ven a vernos</p>
-      </div>
-      <div class="store-copy">
-        <p class="section-kicker">Una tienda cercana</p>
-        <h2 id="store-title">Tu tienda local en Palma del Río.</h2>
-        <p>
-          Pásate por la tienda o contacta antes para consultar disponibilidad,
-          preparar un encargo o pedir ayuda para encontrar el regalo perfecto.
-        </p>
-        <ul>
-          <li>
-            <span>01</span>
-            <div>
-              <strong>Elige</strong>
-              <p>Entre papelería, flores, regalos, juguetes y complementos.</p>
-            </div>
-          </li>
-          <li>
-            <span>02</span>
-            <div>
-              <strong>Personaliza</strong>
-              <p>Cuéntanos tu idea y para quién es; te ayudamos a darle forma.</p>
-            </div>
-          </li>
-          <li>
-            <span>03</span>
-            <div>
-              <strong>Recoge</strong>
-              <p>Tu pedido estará preparado para recogerlo directamente en la tienda.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="contact-section" id="contacto" aria-labelledby="contact-title">
-      <div>
-        <p class="section-kicker">¿Te ayudamos?</p>
-        <h2 id="contact-title">Cuéntanos qué estás buscando.</h2>
-        <p>Respondemos tus dudas y preparamos encargos personalizados.</p>
-      </div>
-      <div class="contact-actions">
-        <a class="contact-card contact-card--message" href="https://www.instagram.com/colorinespalma/" target="_blank" rel="noopener noreferrer">
-          <span>Mensaje directo</span>
-          <strong>Habla con Colorines</strong>
-        </a>
-        <a class="contact-card contact-card--instagram" href="https://www.instagram.com/colorinespalma/" target="_blank" rel="noopener noreferrer">
-          <span>Instagram</span>
-          <strong>@colorinespalma</strong>
-        </a>
-        <div class="contact-card contact-card--location">
-          <span>Encuéntranos</span>
-          <strong>Palma del Río<br>Córdoba</strong>
-        </div>
-      </div>
-    </section>
+    <aside class="rightbar">
+      <section class="card chat-card">
+        <div class="chat-title"><span><i></i><h2>Chat</h2></span><button id="collapse-chat">−</button></div>
+        <input id="chat-search" type="search" placeholder="Buscar amigos">
+        <div id="online-list"></div>
+        <small>7 amigos más conectados hoy</small>
+      </section>
+      <section class="card beta-note"><img src="assets/thirty-logo.svg" alt=""><p><b>Thirty beta</b><span>Esta demo funciona sin cuentas, servidor ni conexiones externas. Los cambios se guardan solo en este navegador.</span></p></section>
+    </aside>
   </main>
 
-  <footer>
-    <a class="footer-brand" href="#inicio">
-      <img src="assets/logo.svg?v=real-1" alt="Colorines" width="200" height="200">
-    </a>
-    <p>Papelería · Copistería · Floristería · Regalos</p>
-    <div class="footer-links">
-      <a href="https://www.instagram.com/colorinespalma/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <span>Palma del Río · Córdoba</span>
-    </div>
-  </footer>
+  <nav class="mobile-nav" aria-label="Navegación móvil"><button class="active" data-view="inicio">⌂<span>Inicio</span></button><button data-view="mensajes">✉<span>Mensajes</span></button><button data-view="fotos">▣<span>Fotos</span></button><button data-view="gente">♙<span>Gente</span></button><button data-view="perfil">●<span>Perfil</span></button></nav>
 
-  <a class="floating-instagram" href="https://www.instagram.com/colorinespalma/" target="_blank" rel="noopener noreferrer" aria-label="Abrir el Instagram de Colorines">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="instagram-dot" cx="17.5" cy="6.5" r="1"></circle></svg>
-  </a>
+  <aside class="chat-window" id="chat-window" hidden><header><span><i></i><b id="chat-name"></b></span><button id="close-chat">×</button></header><div id="chat-messages"></div><form id="chat-form"><input placeholder="Escribe aquí…" required><button>Enviar</button></form></aside>
+
+  <dialog id="photo-modal" class="modal photo-modal"><button class="modal-close" data-close-modal>×</button><div id="photo-large" class="shot"></div><aside><div class="photo-owner"><span class="avatar avatar--javi">JD</span><p><b>Javi Díaz</b><small id="photo-date"></small></p></div><p id="photo-caption"></p><div id="photo-comments"></div><form id="photo-comment-form"><input placeholder="Escribe un comentario…" required><button class="primary">Comentar</button></form></aside></dialog>
+
+  <dialog id="upload-modal" class="modal form-modal"><button class="modal-close" data-close-modal>×</button><header><span>Álbum local</span><h2>Subir fotos</h2><p>No se enviará ningún archivo: se añadirá una foto de demostración a este navegador.</p></header><form id="upload-form"><label>Título<input name="title" maxlength="45" required></label><label>Descripción<textarea name="caption" maxlength="140"></textarea></label><label>Álbum<select name="album"><option value="amigos">Los de siempre</option><option value="musica">Conciertos</option><option value="viajes">Escapadas</option></select></label><button class="primary">Añadir foto</button></form></dialog>
+
+  <dialog id="event-modal" class="modal form-modal"><button class="modal-close" data-close-modal>×</button><header><span>Nuevo plan</span><h2>Crear evento</h2></header><form id="event-form"><label>Nombre<input name="title" required></label><label>Fecha<input name="date" type="date" required></label><label>Hora<input name="time" type="time" required></label><label>Lugar<input name="place" required></label><button class="primary">Crear evento</button></form></dialog>
+
+  <dialog id="profile-modal" class="modal form-modal"><button class="modal-close" data-close-modal>×</button><header><span>Mi perfil</span><h2>Editar presentación</h2></header><form id="profile-form"><label>Nombre<input name="name" value="Javi Díaz" required></label><label>Presentación<textarea name="bio">Desarrollador, músico a ratos y superviviente de los 30.</textarea></label><button class="primary">Guardar cambios</button></form></dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <footer class="footer"><span>Thirty · Red social nostálgica para amigos</span><span>v0.1.0 · 06/08/2026 · Todo se guarda localmente</span></footer>
 </body>
 </html>
