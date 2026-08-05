@@ -6,8 +6,9 @@
   <meta name="theme-color" content="#467ca6">
   <meta name="description" content="Thirty, una red social nostálgica para amigos inspirada en la web social de finales de los 2000.">
   <title>Thirty · La red de los de siempre</title>
-  <link rel="icon" href="assets/thirty-logo.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/thirty-logo.svg?v=thirty-logo-20260806-2" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css?v=thirty-20260806">
+  <link rel="stylesheet" href="logo-update.css?v=thirty-logo-20260806-2">
   <script src="app.js?v=thirty-20260806" defer></script>
 </head>
 <body>
@@ -15,8 +16,8 @@
 
   <header class="topbar">
     <div class="topbar__inner">
-      <button class="brand" type="button" data-view="inicio" aria-label="Ir al inicio">
-        <img src="assets/thirty-logo.svg" alt="Thirty" width="145" height="42">
+      <button class="brand" type="button" data-view="inicio" aria-label="Ir al inicio de Thirty">
+        <img src="assets/thirty-logo.svg?v=thirty-logo-20260806-2" alt="" width="42" height="42" aria-hidden="true">
       </button>
       <nav class="desktop-nav" aria-label="Navegación principal">
         <button class="active" type="button" data-view="inicio">Inicio</button>
@@ -80,6 +81,10 @@
     <section class="content">
       <section class="screen active" id="inicio" aria-labelledby="inicio-title">
         <h1 class="sr-only" id="inicio-title">Inicio</h1>
+        <div class="home-brand" aria-label="Thirty, la red de los de siempre">
+          <img src="assets/thirty-logo.svg?v=thirty-logo-20260806-2" alt="" width="56" height="56" aria-hidden="true">
+          <div class="home-brand__copy"><strong>Thirty</strong><span>La red de los de siempre</span></div>
+        </div>
         <section class="card composer">
           <div><span class="avatar avatar--javi">JD</span><textarea id="status" maxlength="180" placeholder="¿Qué estás pensando?"></textarea></div>
           <footer><span><button type="button" data-demo-action>▣ Foto</button><button type="button" data-demo-action>♫ Música</button><button type="button" data-demo-action>⌖ Lugar</button></span><small id="counter">180</small><button class="primary" id="publish" type="button">Publicar</button></footer>
@@ -151,7 +156,7 @@
         <div id="online-list"></div>
         <small>7 amigos más conectados hoy</small>
       </section>
-      <section class="card beta-note"><img src="assets/thirty-logo.svg" alt=""><p><b>Thirty beta</b><span>Esta demo funciona sin cuentas, servidor ni conexiones externas. Los cambios se guardan solo en este navegador.</span></p></section>
+      <section class="card beta-note"><img src="assets/thirty-logo.svg?v=thirty-logo-20260806-2" alt="" width="42" height="42"><p><b>Thirty beta</b><span>Esta demo funciona sin cuentas, servidor ni conexiones externas. Los cambios se guardan solo en este navegador.</span></p></section>
     </aside>
   </main>
 
@@ -168,6 +173,6 @@
   <dialog id="profile-modal" class="modal form-modal"><button class="modal-close" data-close-modal>×</button><header><span>Mi perfil</span><h2>Editar presentación</h2></header><form id="profile-form"><label>Nombre<input name="name" value="Javi Díaz" required></label><label>Presentación<textarea name="bio">Desarrollador, músico a ratos y superviviente de los 30.</textarea></label><button class="primary">Guardar cambios</button></form></dialog>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <footer class="footer"><span>Thirty · Red social nostálgica para amigos</span><span>v0.1.0 · 06/08/2026 · Todo se guarda localmente</span></footer>
+  <footer class="footer"><span>Thirty · Red social nostálgica para amigos</span><span>v0.1.1 · 06/08/2026 · Todo se guarda localmente</span></footer>
 </body>
 </html>
