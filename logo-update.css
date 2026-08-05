@@ -1,0 +1,74 @@
+/* Ajuste de marca · Thirty v0.1.1 · 06/08/2026 */
+.brand{
+  width:46px;
+  flex:0 0 46px;
+  height:46px;
+  padding:0;
+  display:grid;
+  place-items:center;
+}
+.brand img{
+  width:40px;
+  height:40px;
+  object-fit:contain;
+}
+.home-brand{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  min-height:74px;
+  margin-bottom:12px;
+  padding:10px 14px;
+  border:1px solid #cfdbe2;
+  border-radius:4px;
+  background:linear-gradient(180deg,#ffffff 0%,#f2f7fa 100%);
+  box-shadow:0 1px 3px rgba(28,48,61,.13);
+}
+.home-brand img{
+  width:56px;
+  height:56px;
+  flex:0 0 56px;
+  object-fit:contain;
+}
+.home-brand__copy{
+  display:grid;
+  gap:1px;
+}
+.home-brand__copy strong{
+  color:#2676c8;
+  font-size:32px;
+  line-height:1;
+  letter-spacing:-1.5px;
+}
+.home-brand__copy span{
+  color:#778792;
+  font-size:12px;
+}
+.beta-note img{
+  width:42px;
+  height:42px;
+  flex:0 0 42px;
+  object-fit:contain;
+}
+@media (max-width:720px){
+  .brand{
+    width:42px;
+    flex-basis:42px;
+  }
+  .brand img{
+    width:38px;
+    height:38px;
+  }
+  .home-brand{
+    min-height:64px;
+    padding:8px 10px;
+  }
+  .home-brand img{
+    width:48px;
+    height:48px;
+    flex-basis:48px;
+  }
+  .home-brand__copy strong{
+    font-size:27px;
+  }
+}
